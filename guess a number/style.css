@@ -1,0 +1,100 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Press Start 2P', sans-serif;
+    color: #eee;
+    background-color: #222;
+    /* background-color: #60b347; */
+    padding-left:2rem ;
+    padding-right: 2rem;
+}
+
+html{
+    height: 65vh;
+}
+
+
+/* layout */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+main{
+    margin:3rem 0 4rem 0;
+}
+
+main > div{
+    position: relative;
+}
+
+main > div div{
+    width: 5rem;
+    background-color: #eee;
+    height: 3rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    margin-left: -2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #222;
+    
+}
+
+main span{
+   font-weight: 600;
+   font-size: 2rem;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-con{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+
+}
+
+/* button styling */
+button{
+    height: 2rem;
+    width: 5rem;
+    background: #222;
+    color: #eee;
+    border-color: #eee;
+    font-family: 'Press Start 2P', sans-serif;
+
+}
+
+section button{
+    margin-top: 2rem;
+    font-size: 0.6rem;
+}
+
+/* text */
+h1{
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+/* input */
+input{
+    height: 4rem;
+    background-color: #222;
+    border-color: #eee;
+    color: #eee;
+    text-align: center;
+}
