@@ -21,6 +21,7 @@ body{
     margin-top: -25vh;
     margin-left: -25%;
     padding: 2rem 1rem;
+    z-index: 6;
 }
 
 .popup--con h3{
@@ -48,7 +49,7 @@ body{
    display: flex;
    justify-content: center;
    gap: 2rem;
-   margin-top: 2rem;
+   margin: 2rem auto;
 }
 
 .btn{
@@ -67,6 +68,19 @@ body{
     opacity: 0.8;
     color: white;
     border: solid 1px white;
+}
+
+/* overlay styling */
+.overlay{
+    background-color:black;
+    opacity: 0.6;
+    backdrop-filter: blur(3px);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
 }
 
 /* Media queries */
