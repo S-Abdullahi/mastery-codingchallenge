@@ -20,17 +20,20 @@ function check(){
         guessRemark.textContent = 'Enter a number'
     } else{
 
+        // generate secrete number
         let secreteNumber = Math.floor(Math.random()*20)
-
-        if(score > 0){
-            secreteNumberDisplay.textContent = secreteNumber
-        }
 
                 // correct guess
             if(secreteNumber === guessNumber){
                 guessRemark.textContent  = '🎉 guess is correct'
-                highscore = score
-                highscoreDisplay.textContent = highscore
+
+                if(score > highscore){
+                    highscore = score
+                    highscoreDisplay.textContent = highscore
+                }
+
+                // display secrete number
+                secreteNumberDisplay.textContent = secreteNumber
                 bodyStyle.style.backgroundColor ='#60b347'
             } 
             
@@ -43,6 +46,10 @@ function check(){
                 } else if (score < 1){
                     guessRemark.textContent = 'you lose'
                 }
+
+                secreteNumberDisplay.textContent = '?'
+                bodyStyle.style.backgroundColor ='#222'
+
             } 
             // guess is higher than secrete number
             else if (guessNumber < secreteNumber){
@@ -53,7 +60,11 @@ function check(){
                 } else if (score < 1){
                     guessRemark.textContent = 'you lose'
                 }
+
+                secreteNumberDisplay.textContent = '?'
+                bodyStyle.style.backgroundColor ='#222'
             } 
+
             
         }
 
@@ -61,5 +72,10 @@ function check(){
 
 function again(){
     score = 20
+    let guessRemark =  document.querySelector('.guess-result')
+
+    document.querySelector('.score').textContent = score
     document.querySelector('body').style.backgroundColor = '#222'
+    guessRemark.textContent = 'Start guessing...'
+    
 }

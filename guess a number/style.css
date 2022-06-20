@@ -23,7 +23,8 @@ html{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    align-items: center;
+    padding-top: 2rem;
 }
 
 main{
@@ -57,14 +58,19 @@ main span{
 
 section{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .result-con{
    display: flex;
    flex-direction: column;
-   gap: 1rem;
+   width: 30%;
+   padding-right: 10px;
 
+}
+
+.result-con > *{
+    margin-bottom: 20px;
 }
 
 /* button styling */
@@ -93,8 +99,51 @@ h1{
 /* input */
 input{
     height: 4rem;
+    width: 50%;
     background-color: #222;
     border-color: #eee;
     color: #eee;
     text-align: center;
+}
+
+input[type=text]{
+    font-size: 2rem;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width:400px){
+
+    h1{
+        font-size: 1rem;
+    }
+
+    header span{
+        font-size: 0.4rem;
+    }
+
+    main span{
+        font-size: 1rem;
+    }
+    .result-con{
+    padding-left: -300px;        
+    }
+    .result-con span{
+        font-size: 0.7rem;
+    }
+
+    section{
+        justify-content: center;
+    }
+}
+
+@media (max-width:500px){
+    h1{
+        font-size: 1.2rem;
+    }
+
+    header span{
+    font-size: 0.8rem;
+    }
 }
